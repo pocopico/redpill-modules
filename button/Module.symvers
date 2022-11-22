@@ -1,0 +1,3 @@
+0x00000000	acpi_lid_notifier_register	/opt/downloads/redpill-modules/button/button	EXPORT_SYMBOL
+0x00000000	acpi_lid_open	/opt/downloads/redpill-modules/button/button	EXPORT_SYMBOL
+0x00000000	acpi_lid_notifier_unregister	/opt/downloads/redpill-modules/button/button	EXPORT_SYMBOL

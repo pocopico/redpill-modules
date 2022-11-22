@@ -1,0 +1,3 @@
+kernel//opt/downloads/redpill-modules/megaraid-sas/megaraid_mm.ko
+kernel//opt/downloads/redpill-modules/megaraid-sas/megaraid_mbox.ko
+kernel//opt/downloads/redpill-modules/megaraid-sas/megaraid_sas.ko

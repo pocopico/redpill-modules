@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/vmxnet3/vmxnet3.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/vmxnet3/vmxnet3.o /opt/downloads/redpill-modules/vmxnet3/vmxnet3_drv.o /opt/downloads/redpill-modules/vmxnet3/vmxnet3_ethtool.o 

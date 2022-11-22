@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/igbvf/igbvf.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/igbvf/igbvf.ko /opt/downloads/redpill-modules/igbvf/igbvf.o /opt/downloads/redpill-modules/igbvf/igbvf.mod.o

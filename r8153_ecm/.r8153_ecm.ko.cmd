@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/r8153_ecm/r8153_ecm.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/r8153_ecm/r8153_ecm.ko /opt/downloads/redpill-modules/r8153_ecm/r8153_ecm.o /opt/downloads/redpill-modules/r8153_ecm/r8153_ecm.mod.o

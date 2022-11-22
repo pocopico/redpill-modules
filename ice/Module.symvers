@@ -1,0 +1,5 @@
+0x00000000	__auxiliary_driver_register	/opt/downloads/redpill-modules/ice/auxiliary	EXPORT_SYMBOL_GPL
+0x00000000	auxiliary_find_device	/opt/downloads/redpill-modules/ice/auxiliary	EXPORT_SYMBOL_GPL
+0x00000000	__auxiliary_device_add	/opt/downloads/redpill-modules/ice/auxiliary	EXPORT_SYMBOL_GPL
+0x00000000	auxiliary_device_init	/opt/downloads/redpill-modules/ice/auxiliary	EXPORT_SYMBOL_GPL
+0x00000000	auxiliary_driver_unregister	/opt/downloads/redpill-modules/ice/auxiliary	EXPORT_SYMBOL_GPL

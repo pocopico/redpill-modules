@@ -1,0 +1,2 @@
+/opt/downloads/redpill-modules/mpt3sas/mpt3sas.ko
+/opt/downloads/redpill-modules/mpt3sas/mpt3sas_base.o /opt/downloads/redpill-modules/mpt3sas/mpt3sas_config.o /opt/downloads/redpill-modules/mpt3sas/mpt3sas_warpdrive.o /opt/downloads/redpill-modules/mpt3sas/mpt3sas_scsih.o /opt/downloads/redpill-modules/mpt3sas/mpt3sas_transport.o /opt/downloads/redpill-modules/mpt3sas/mpt3sas_ctl.o /opt/downloads/redpill-modules/mpt3sas/mpt3sas_trigger_diag.o /opt/downloads/redpill-modules/mpt3sas/mpt3sas_debugfs.o

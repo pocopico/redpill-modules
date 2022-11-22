@@ -1,0 +1,2 @@
+/opt/downloads/redpill-modules/libsas/libsas.ko
+/opt/downloads/redpill-modules/libsas/sas_init.o /opt/downloads/redpill-modules/libsas/sas_phy.o /opt/downloads/redpill-modules/libsas/sas_port.o /opt/downloads/redpill-modules/libsas/sas_event.o /opt/downloads/redpill-modules/libsas/sas_dump.o /opt/downloads/redpill-modules/libsas/sas_discover.o /opt/downloads/redpill-modules/libsas/sas_expander.o /opt/downloads/redpill-modules/libsas/sas_scsi_host.o /opt/downloads/redpill-modules/libsas/sas_task.o

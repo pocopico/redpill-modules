@@ -1,0 +1,4 @@
+0x00000000	macvlan_common_setup	/opt/downloads/redpill-modules/macvlan/macvlan	EXPORT_SYMBOL_GPL
+0x00000000	macvlan_dellink	/opt/downloads/redpill-modules/macvlan/macvlan	EXPORT_SYMBOL_GPL
+0x00000000	macvlan_link_register	/opt/downloads/redpill-modules/macvlan/macvlan	EXPORT_SYMBOL_GPL
+0x00000000	macvlan_common_newlink	/opt/downloads/redpill-modules/macvlan/macvlan	EXPORT_SYMBOL_GPL

@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/cxgb4vf/cxgb4vf.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/cxgb4vf/cxgb4vf.o /opt/downloads/redpill-modules/cxgb4vf/cxgb4vf_main.o /opt/downloads/redpill-modules/cxgb4vf/t4vf_hw.o /opt/downloads/redpill-modules/cxgb4vf/sge.o 

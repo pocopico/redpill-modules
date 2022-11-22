@@ -1,0 +1,11 @@
+kernel//opt/downloads/redpill-modules/mptsas/mptbase.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptscsih.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptspi.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptbase.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptscsih.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptfc.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptbase.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptscsih.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptsas.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptctl.ko
+kernel//opt/downloads/redpill-modules/mptsas/mptlan.ko

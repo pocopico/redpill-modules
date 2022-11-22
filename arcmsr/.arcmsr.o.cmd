@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/arcmsr/arcmsr.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/arcmsr/arcmsr.o /opt/downloads/redpill-modules/arcmsr/arcmsr_attr.o /opt/downloads/redpill-modules/arcmsr/arcmsr_hba.o 

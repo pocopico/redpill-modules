@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/virtio/virtio_pci.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/virtio/virtio_pci.o /opt/downloads/redpill-modules/virtio/virtio_pci_modern.o /opt/downloads/redpill-modules/virtio/virtio_pci_common.o 

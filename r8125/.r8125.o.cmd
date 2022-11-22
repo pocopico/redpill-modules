@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/r8125/r8125.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/r8125/r8125.o /opt/downloads/redpill-modules/r8125/r8125_n.o /opt/downloads/redpill-modules/r8125/rtl_eeprom.o /opt/downloads/redpill-modules/r8125/rtltool.o 

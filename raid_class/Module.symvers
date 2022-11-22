@@ -1,0 +1,3 @@
+0x00000000	raid_class_release	/opt/downloads/redpill-modules/raid_class/raid_class	EXPORT_SYMBOL
+0x00000000	raid_class_attach	/opt/downloads/redpill-modules/raid_class/raid_class	EXPORT_SYMBOL
+0x00000000	raid_component_add	/opt/downloads/redpill-modules/raid_class/raid_class	EXPORT_SYMBOL

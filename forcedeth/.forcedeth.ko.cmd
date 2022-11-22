@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/forcedeth/forcedeth.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/forcedeth/forcedeth.ko /opt/downloads/redpill-modules/forcedeth/forcedeth.o /opt/downloads/redpill-modules/forcedeth/forcedeth.mod.o

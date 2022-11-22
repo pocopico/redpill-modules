@@ -1,0 +1,2 @@
+/opt/downloads/redpill-modules/cxgb3/cxgb3.ko
+/opt/downloads/redpill-modules/cxgb3/cxgb3_main.o /opt/downloads/redpill-modules/cxgb3/ael1002.o /opt/downloads/redpill-modules/cxgb3/vsc8211.o /opt/downloads/redpill-modules/cxgb3/t3_hw.o /opt/downloads/redpill-modules/cxgb3/mc5.o /opt/downloads/redpill-modules/cxgb3/xgmac.o /opt/downloads/redpill-modules/cxgb3/sge.o /opt/downloads/redpill-modules/cxgb3/l2t.o /opt/downloads/redpill-modules/cxgb3/cxgb3_offload.o /opt/downloads/redpill-modules/cxgb3/aq100x.o

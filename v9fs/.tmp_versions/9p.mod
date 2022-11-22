@@ -1,0 +1,2 @@
+/opt/downloads/redpill-modules/v9fs/9p.ko
+/opt/downloads/redpill-modules/v9fs/vfs_super.o /opt/downloads/redpill-modules/v9fs/vfs_inode.o /opt/downloads/redpill-modules/v9fs/vfs_inode_dotl.o /opt/downloads/redpill-modules/v9fs/vfs_addr.o /opt/downloads/redpill-modules/v9fs/vfs_file.o /opt/downloads/redpill-modules/v9fs/vfs_dir.o /opt/downloads/redpill-modules/v9fs/vfs_dentry.o /opt/downloads/redpill-modules/v9fs/v9fs.o /opt/downloads/redpill-modules/v9fs/fid.o /opt/downloads/redpill-modules/v9fs/xattr.o

@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/qlcnic/qlcnic.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/qlcnic/qlcnic.ko /opt/downloads/redpill-modules/qlcnic/qlcnic.o /opt/downloads/redpill-modules/qlcnic/qlcnic.mod.o

@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/vxge/vxge.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/vxge/vxge.o /opt/downloads/redpill-modules/vxge/vxge-config.o /opt/downloads/redpill-modules/vxge/vxge-traffic.o /opt/downloads/redpill-modules/vxge/vxge-ethtool.o /opt/downloads/redpill-modules/vxge/vxge-main.o 

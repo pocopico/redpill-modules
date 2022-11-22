@@ -1,0 +1,6 @@
+0x00000000	mdio45_ethtool_gset_npage	/opt/downloads/redpill-modules/mdio/mdio	EXPORT_SYMBOL
+0x00000000	mdio45_links_ok	/opt/downloads/redpill-modules/mdio/mdio	EXPORT_SYMBOL
+0x00000000	mdio_mii_ioctl	/opt/downloads/redpill-modules/mdio/mdio	EXPORT_SYMBOL
+0x00000000	mdio45_nway_restart	/opt/downloads/redpill-modules/mdio/mdio	EXPORT_SYMBOL
+0x00000000	mdio_set_flag	/opt/downloads/redpill-modules/mdio/mdio	EXPORT_SYMBOL
+0x00000000	mdio45_probe	/opt/downloads/redpill-modules/mdio/mdio	EXPORT_SYMBOL

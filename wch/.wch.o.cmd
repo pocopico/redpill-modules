@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/wch/wch.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/wch/wch.o /opt/downloads/redpill-modules/wch/wch_main.o /opt/downloads/redpill-modules/wch/wch_devtable.o /opt/downloads/redpill-modules/wch/wch_serial.o 

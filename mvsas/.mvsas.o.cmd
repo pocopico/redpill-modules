@@ -1,0 +1,1 @@
+cmd_/opt/downloads/redpill-modules/mvsas/mvsas.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/mvsas/mvsas.o /opt/downloads/redpill-modules/mvsas/mv_init.o /opt/downloads/redpill-modules/mvsas/mv_sas.o /opt/downloads/redpill-modules/mvsas/mv_64xx.o /opt/downloads/redpill-modules/mvsas/mv_94xx.o 
