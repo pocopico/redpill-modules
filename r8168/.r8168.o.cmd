@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/r8168/r8168.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/r8168/r8168.o /opt/downloads/redpill-modules/r8168/r8168_n.o /opt/downloads/redpill-modules/r8168/r8168_asf.o /opt/downloads/redpill-modules/r8168/rtl_eeprom.o /opt/downloads/redpill-modules/r8168/rtltool.o 

@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/8139cp/8139cp.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/8139cp/8139cp.ko /opt/downloads/redpill-modules/8139cp/8139cp.o /opt/downloads/redpill-modules/8139cp/8139cp.mod.o

@@ -1,2 +1,0 @@
-/opt/downloads/redpill-modules/e1000e/e1000e.ko
-/opt/downloads/redpill-modules/e1000e/netdev.o /opt/downloads/redpill-modules/e1000e/ethtool.o /opt/downloads/redpill-modules/e1000e/ich8lan.o /opt/downloads/redpill-modules/e1000e/mac.o /opt/downloads/redpill-modules/e1000e/nvm.o /opt/downloads/redpill-modules/e1000e/phy.o /opt/downloads/redpill-modules/e1000e/manage.o /opt/downloads/redpill-modules/e1000e/80003es2lan.o /opt/downloads/redpill-modules/e1000e/82571.o /opt/downloads/redpill-modules/e1000e/param.o /opt/downloads/redpill-modules/e1000e/kcompat.o

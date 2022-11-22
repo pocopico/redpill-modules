@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/vmw_pvscsi/vmw_pvscsi.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/vmw_pvscsi/vmw_pvscsi.ko /opt/downloads/redpill-modules/vmw_pvscsi/vmw_pvscsi.o /opt/downloads/redpill-modules/vmw_pvscsi/vmw_pvscsi.mod.o

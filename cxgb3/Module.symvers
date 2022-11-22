@@ -11,6 +11,6 @@
 0x00000000	t3_l2e_free	/opt/downloads/redpill-modules/cxgb3/cxgb3	EXPORT_SYMBOL
 0x00000000	cxgb3_remove_tid	/opt/downloads/redpill-modules/cxgb3/cxgb3	EXPORT_SYMBOL
 0x00000000	cxgb3_free_atid	/opt/downloads/redpill-modules/cxgb3/cxgb3	EXPORT_SYMBOL
-0x00000000	cxgb3_alloc_atid	/opt/downloads/redpill-modules/cxgb3/cxgb3	EXPORT_SYMBOL
 0x00000000	cxgb3_alloc_stid	/opt/downloads/redpill-modules/cxgb3/cxgb3	EXPORT_SYMBOL
+0x00000000	cxgb3_alloc_atid	/opt/downloads/redpill-modules/cxgb3/cxgb3	EXPORT_SYMBOL
 0x00000000	cxgb3_queue_tid_release	/opt/downloads/redpill-modules/cxgb3/cxgb3	EXPORT_SYMBOL

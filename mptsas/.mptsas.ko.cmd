@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/mptsas/mptsas.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/mptsas/mptsas.ko /opt/downloads/redpill-modules/mptsas/mptsas.o /opt/downloads/redpill-modules/mptsas/mptsas.mod.o

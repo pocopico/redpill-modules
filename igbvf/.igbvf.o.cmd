@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/igbvf/igbvf.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/igbvf/igbvf.o /opt/downloads/redpill-modules/igbvf/vf.o /opt/downloads/redpill-modules/igbvf/mbx.o /opt/downloads/redpill-modules/igbvf/ethtool.o /opt/downloads/redpill-modules/igbvf/netdev.o 

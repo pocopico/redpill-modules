@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/megaraid-sas/megaraid_sas.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/megaraid-sas/megaraid_sas.o /opt/downloads/redpill-modules/megaraid-sas/megaraid_sas_base.o /opt/downloads/redpill-modules/megaraid-sas/megaraid_sas_fusion.o /opt/downloads/redpill-modules/megaraid-sas/megaraid_sas_fp.o 

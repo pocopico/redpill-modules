@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/r8125/r8125.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/r8125/r8125.ko /opt/downloads/redpill-modules/r8125/r8125.o /opt/downloads/redpill-modules/r8125/r8125.mod.o

@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/e1000/e1000.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/e1000/e1000.ko /opt/downloads/redpill-modules/e1000/e1000.o /opt/downloads/redpill-modules/e1000/e1000.mod.o

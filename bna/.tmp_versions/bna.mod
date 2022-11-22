@@ -1,2 +1,0 @@
-/opt/downloads/redpill-modules/bna/bna.ko
-/opt/downloads/redpill-modules/bna/bnad.o /opt/downloads/redpill-modules/bna/bnad_ethtool.o /opt/downloads/redpill-modules/bna/bnad_debugfs.o /opt/downloads/redpill-modules/bna/bna_enet.o /opt/downloads/redpill-modules/bna/bna_tx_rx.o /opt/downloads/redpill-modules/bna/bfa_msgq.o /opt/downloads/redpill-modules/bna/bfa_ioc.o /opt/downloads/redpill-modules/bna/bfa_ioc_ct.o /opt/downloads/redpill-modules/bna/bfa_cee.o /opt/downloads/redpill-modules/bna/cna_fwimg.o

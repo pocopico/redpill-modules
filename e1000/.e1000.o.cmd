@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/e1000/e1000.o := ld -m elf_x86_64  -z max-page-size=0x200000   -r -o /opt/downloads/redpill-modules/e1000/e1000.o /opt/downloads/redpill-modules/e1000/e1000_main.o /opt/downloads/redpill-modules/e1000/e1000_hw.o /opt/downloads/redpill-modules/e1000/e1000_ethtool.o /opt/downloads/redpill-modules/e1000/e1000_param.o 

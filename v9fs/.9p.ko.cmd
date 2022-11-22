@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/v9fs/9p.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/v9fs/9p.ko /opt/downloads/redpill-modules/v9fs/9p.o /opt/downloads/redpill-modules/v9fs/9p.mod.o

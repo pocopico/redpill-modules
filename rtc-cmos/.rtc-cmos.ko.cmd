@@ -1,1 +1,0 @@
-cmd_/opt/downloads/redpill-modules/rtc-cmos/rtc-cmos.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /opt/downloads/redpill-modules/rtc-cmos/rtc-cmos.ko /opt/downloads/redpill-modules/rtc-cmos/rtc-cmos.o /opt/downloads/redpill-modules/rtc-cmos/rtc-cmos.mod.o

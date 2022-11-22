@@ -1,1 +1,0 @@
-cmd_/opt/dsm-kernel/intel/ixgbe-5.13.4/src/ixgbe.ko := /usr/bin/x86_64-linux-gnu-ld -r -I/opt/dsm-kernel/r1000/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/lib/ -T ./scripts/module-common.lds --build-id  -o /opt/dsm-kernel/intel/ixgbe-5.13.4/src/ixgbe.ko /opt/dsm-kernel/intel/ixgbe-5.13.4/src/ixgbe.o /opt/dsm-kernel/intel/ixgbe-5.13.4/src/ixgbe.mod.o

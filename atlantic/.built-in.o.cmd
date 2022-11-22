@@ -1,1 +1,0 @@
-cmd_/opt/dsm-kernel/atlantic/Marvell_Linux_2.4.15/Linux/built-in.o :=  rm -f /opt/dsm-kernel/atlantic/Marvell_Linux_2.4.15/Linux/built-in.o; /usr/bin/x86_64-linux-gnu-ar rcsD /opt/dsm-kernel/atlantic/Marvell_Linux_2.4.15/Linux/built-in.o
