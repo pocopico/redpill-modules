@@ -1,2 +1,0 @@
-0x00000000	vxlan_dev_create	/opt/downloads/redpill-modules/vxlan/vxlan	EXPORT_SYMBOL_GPL
-0x00000000	vxlan_get_rx_port	/opt/downloads/redpill-modules/vxlan/vxlan	EXPORT_SYMBOL_GPL

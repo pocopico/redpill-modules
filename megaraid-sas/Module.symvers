@@ -1,3 +1,0 @@
-0x00000000	mraid_mm_adapter_app_handle	/opt/downloads/redpill-modules/megaraid-sas/megaraid_mm	EXPORT_SYMBOL
-0x00000000	mraid_mm_register_adp	/opt/downloads/redpill-modules/megaraid-sas/megaraid_mm	EXPORT_SYMBOL
-0x00000000	mraid_mm_unregister_adp	/opt/downloads/redpill-modules/megaraid-sas/megaraid_mm	EXPORT_SYMBOL

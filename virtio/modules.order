@@ -1,7 +1,0 @@
-kernel//opt/downloads/redpill-modules/virtio/virtio.ko
-kernel//opt/downloads/redpill-modules/virtio/virtio_ring.ko
-kernel//opt/downloads/redpill-modules/virtio/virtio_mmio.ko
-kernel//opt/downloads/redpill-modules/virtio/virtio_pci.ko
-kernel//opt/downloads/redpill-modules/virtio/virtio_net.ko
-kernel//opt/downloads/redpill-modules/virtio/virtio_scsi.ko
-kernel//opt/downloads/redpill-modules/virtio/virtio_blk.ko

@@ -1,3 +1,0 @@
-0x00000000	be_roce_unregister_driver	/opt/downloads/redpill-modules/be2net/be2net	EXPORT_SYMBOL
-0x00000000	be_roce_mcc_cmd	/opt/downloads/redpill-modules/be2net/be2net	EXPORT_SYMBOL
-0x00000000	be_roce_register_driver	/opt/downloads/redpill-modules/be2net/be2net	EXPORT_SYMBOL

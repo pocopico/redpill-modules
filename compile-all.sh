@@ -9,7 +9,7 @@ RANLIB="/usr/bin/x86_64-linux-gnu-ranlib"
 LD="/usr/bin/x86_64-linux-gnu-ld" 
 CC="/usr/bin/x86_64-linux-gnu-gcc"
 LD_LIBRARY_PATH="$KHOME/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib" 
-KSRC="$KHOME/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-7.0/build/" \
+KSRC="$KHOME/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-7.1/build/" \
 ARCH=x86_64 
 
 
