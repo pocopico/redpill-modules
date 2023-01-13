@@ -6,7 +6,7 @@
 # Copyright (C) 2005 Luben Tuikov <luben_tuikov@adaptec.com>
 #
 
-obj-m += libsas.o
+obj-m += scsi_transport_sas.o libsas.o
 libsas-y +=  sas_init.o     \
 		sas_phy.o      \
 		sas_port.o     \

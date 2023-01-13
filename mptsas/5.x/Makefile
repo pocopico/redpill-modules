@@ -7,8 +7,7 @@
 
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-} LSI_LOGIC
 
-obj-m	+= mptbase.o mptscsih.o mptspi.o
+obj-m	+= scsi_transport_sas.o scsi_transport_spi.o mptbase.o mptscsih.o mptspi.o
 obj-m		+= mptbase.o mptscsih.o mptfc.o
-obj-m	+= mptbase.o mptscsih.o mptsas.o
+obj-m	+= scsi_transport_sas.o mptbase.o mptscsih.o mptsas.o
 obj-m	+= mptctl.o
-obj-m	+= mptlan.o
