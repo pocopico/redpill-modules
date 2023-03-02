@@ -95,7 +95,7 @@ static inline u64 mul_u32_u32(u32 a, u32 b)
 #define page_to_virt(x)	__va(PFN_PHYS(page_to_pfn(x)))
 #endif	/* 4.7.0 */
 
-#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 6, 0)
+#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 4, 302)
 
 #if !(RHEL_RELEASE_CODE && (RHEL_RELEASE_CODE > RHEL_RELEASE_VERSION(7, 2)))
 /* from commit fe896d1878949ea92ba547587bc3075cc688fb8f */
