@@ -9,7 +9,7 @@
 
 PWD           := $(shell pwd)
 KVERSION      := 4.4.180+
-EXPECTED_KDIR := /opt/dsm-kernel/v1000/linux-4.4.x
+EXPECTED_KDIR := $(KSRC)
 INSTDIR       := /lib/modules/$(KVERSION)/kernel/drivers/net
 PM_DIR        := /etc/pm/config.d
 RESUME_FILE   := ._RESUME_
