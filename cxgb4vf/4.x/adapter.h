@@ -47,7 +47,7 @@
 #include <linux/if_ether.h>
 #include <linux/netdevice.h>
 
-#include "../cxgb4/t4_hw.h"
+#include "t4_hw.h"
 
 /*
  * Constants of the implementation.

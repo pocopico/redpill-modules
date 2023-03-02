@@ -46,10 +46,10 @@
 #include "t4vf_common.h"
 #include "t4vf_defs.h"
 
-#include "../cxgb4/t4_regs.h"
-#include "../cxgb4/t4_values.h"
-#include "../cxgb4/t4fw_api.h"
-#include "../cxgb4/t4_msg.h"
+#include "t4_regs.h"
+#include "t4_values.h"
+#include "t4fw_api.h"
+#include "t4_msg.h"
 
 /*
  * Constants ...

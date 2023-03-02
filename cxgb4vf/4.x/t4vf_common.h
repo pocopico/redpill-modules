@@ -36,7 +36,7 @@
 #ifndef __T4VF_COMMON_H__
 #define __T4VF_COMMON_H__
 
-#include "../cxgb4/t4fw_api.h"
+#include "t4fw_api.h"
 
 #define CHELSIO_CHIP_CODE(version, revision) (((version) << 4) | (revision))
 #define CHELSIO_CHIP_VERSION(code) (((code) >> 4) & 0xf)

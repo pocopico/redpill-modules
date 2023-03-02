@@ -36,7 +36,7 @@
 #ifndef __T4VF_DEFS_H__
 #define __T4VF_DEFS_H__
 
-#include "../cxgb4/t4_regs.h"
+#include "t4_regs.h"
 
 /*
  * The VF Register Map.

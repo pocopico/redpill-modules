@@ -49,8 +49,8 @@
 #include "t4vf_common.h"
 #include "t4vf_defs.h"
 
-#include "../cxgb4/t4_regs.h"
-#include "../cxgb4/t4_msg.h"
+#include "t4_regs.h"
+#include "t4_msg.h"
 
 /*
  * Generic information about the driver.
@@ -3040,7 +3040,7 @@ static void cxgb4vf_pci_shutdown(struct pci_dev *pdev)
 
 #define CH_PCI_DEVICE_ID_TABLE_DEFINE_END { 0, } }
 
-#include "../cxgb4/t4_pci_id_tbl.h"
+#include "t4_pci_id_tbl.h"
 
 MODULE_DESCRIPTION(DRV_DESC);
 MODULE_AUTHOR("Chelsio Communications");

@@ -2,7 +2,7 @@
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 25)
 #include <linux/usb/usbnet.h>
 #else
-#include <../drivers/usb/net/usbnet.h>
+#include <usbnet.h>
 #endif
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 20, 0)
