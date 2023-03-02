@@ -1,7 +1,7 @@
 /*
  * Linux driver for VMware's vmxnet3 ethernet NIC.
  *
- * Copyright (C) 2008-2020, VMware, Inc. All Rights Reserved.
+ * Copyright (C) 2008-2009, VMware, Inc. All Rights Reserved.
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -20,7 +20,7 @@
  * The full GNU General Public License is included in this distribution in
  * the file called "COPYING".
  *
- * Maintained by: pv-drivers@vmware.com
+ * Maintained by: Shreyas Bhatewara <pv-drivers@vmware.com>
  *
  */
 
@@ -65,26 +65,18 @@
 # define VMXNET3_DRIVER_VERSION_REPORT VMXNET3_DRIVER_VERSION_STRING"-NAPI"
 #endif
 
-
 /*
  * Version numbers
  */
-#define VMXNET3_DRIVER_VERSION_STRING   "1.5.0.0-k"
+#define VMXNET3_DRIVER_VERSION_STRING   "1.4.5.0-k"
 
-/* Each byte of this 32-bit integer encodes a version number in
- * VMXNET3_DRIVER_VERSION_STRING.
- */
-#define VMXNET3_DRIVER_VERSION_NUM      0x01050000
+/* a 32-bit int, each byte encode a verion number in VMXNET3_DRIVER_VERSION */
+#define VMXNET3_DRIVER_VERSION_NUM      0x01040500
 
 #if defined(CONFIG_PCI_MSI)
 	/* RSS only makes sense if MSI-X is supported. */
 	#define VMXNET3_RSS
 #endif
-
-#define VMXNET3_REV_4		3	/* Vmxnet3 Rev. 4 */
-#define VMXNET3_REV_3		2	/* Vmxnet3 Rev. 3 */
-#define VMXNET3_REV_2		1	/* Vmxnet3 Rev. 2 */
-#define VMXNET3_REV_1		0	/* Vmxnet3 Rev. 1 */
 
 /*
  * Capabilities
@@ -122,8 +114,9 @@ enum {
 };
 
 /*
- * Maximum devices supported.
+ * PCI vendor and device IDs.
  */
+#define PCI_DEVICE_ID_VMWARE_VMXNET3    0x07B0
 #define MAX_ETHERNET_CARDS		10
 #define MAX_PCI_PASSTHRU_DEVICE		6
 
@@ -219,16 +212,10 @@ struct vmxnet3_tx_ctx {
 	bool   ipv4;
 	bool   ipv6;
 	u16 mss;
-	u32    l4_offset;	/* only valid for pkts requesting tso or csum
-				 * offloading. For encap offload, it refers to
-				 * inner L4 offset i.e. it includes outer header
-				 * encap header and inner eth and ip header size
+	u32 eth_ip_hdr_size; /* only valid for pkts requesting tso or csum
+				 * offloading
 				 */
-
-	u32	l4_hdr_size;	/* only valid if mss != 0
-				 * Refers to inner L4 hdr size for encap
-				 * offload
-				 */
+	u32 l4_hdr_size;     /* only valid if mss != 0 */
 	u32 copy_size;       /* # of bytes copied into the data ring */
 	union Vmxnet3_GenericDesc *sop_txd;
 	union Vmxnet3_GenericDesc *eop_txd;
@@ -249,7 +236,6 @@ struct vmxnet3_tx_queue {
 	int                             num_stop;  /* # of times the queue is
 						    * stopped */
 	int				qid;
-	u16				txdata_desc_size;
 } __attribute__((__aligned__(SMP_CACHE_BYTES)));
 
 enum vmxnet3_rx_buf_type {
@@ -280,23 +266,15 @@ struct vmxnet3_rq_driver_stats {
 	u64 rx_buf_alloc_failure;
 };
 
-struct vmxnet3_rx_data_ring {
-	Vmxnet3_RxDataDesc *base;
-	dma_addr_t basePA;
-	u16 desc_size;
-};
-
 struct vmxnet3_rx_queue {
 	char			name[IFNAMSIZ + 8]; /* To identify interrupt */
 	struct vmxnet3_adapter	  *adapter;
 	struct napi_struct        napi;
 	struct vmxnet3_cmd_ring   rx_ring[2];
-	struct vmxnet3_rx_data_ring data_ring;
 	struct vmxnet3_comp_ring  comp_ring;
 	struct vmxnet3_rx_ctx     rx_ctx;
 	u32 qid;            /* rqID in RCD for buffer from 1st ring */
 	u32 qid2;           /* rqID in RCD for buffer from 2nd ring */
-	u32 dataRingQid;    /* rqID in RCD for buffer from data ring */
 	struct vmxnet3_rx_buf_info     *buf_info[2];
 	dma_addr_t                      buf_info_pa;
 	struct Vmxnet3_RxQueueCtrl            *shared;
@@ -313,14 +291,13 @@ struct vmxnet3_rx_queue {
 					 VMXNET3_DEVICE_MAX_RX_QUEUES + 1)
 #define VMXNET3_LINUX_MIN_MSIX_VECT     2 /* 1 for tx-rx pair and 1 for event */
 
-
 struct vmxnet3_intr {
 	enum vmxnet3_intr_mask_mode  mask_mode;
 	enum vmxnet3_intr_type       type;	/* MSI-X, MSI, or INTx? */
 	u8  num_intrs;			/* # of intr vectors */
 	u8  event_intr_idx;		/* idx of the intr vector for event */
 	u8  mod_levels[VMXNET3_LINUX_MAX_MSIX_VECT]; /* moderation level */
-	char	event_msi_vector_name[IFNAMSIZ+17];
+	char	event_msi_vector_name[IFNAMSIZ+11];
 #ifdef CONFIG_PCI_MSI
 	struct msix_entry msix_entries[VMXNET3_LINUX_MAX_MSIX_VECT];
 #endif
@@ -330,7 +307,6 @@ struct vmxnet3_intr {
 #define VMXNET3_INTR_BUDDYSHARE 0    /* Corresponding tx,rx queues share irq */
 #define VMXNET3_INTR_TXSHARE 1	     /* All tx queues share one irq */
 #define VMXNET3_INTR_DONTSHARE 2     /* each queue has its own irq */
-
 
 #define VMXNET3_STATE_BIT_RESETTING   0
 #define VMXNET3_STATE_BIT_QUIESCED    1
@@ -351,6 +327,9 @@ struct vmxnet3_adapter {
 	u8			__iomem *hw_addr1; /* for BAR 1 */
 	u8                              version;
 
+	bool				rxcsum;
+	bool				lro;
+
 #ifdef VMXNET3_RSS
 	struct UPT1_RSSConf		*rss_conf;
 	bool				rss;
@@ -363,7 +342,6 @@ struct vmxnet3_adapter {
 	int		rx_buf_per_pkt;  /* only apply to the 1st ring */
 	dma_addr_t			shared_pa;
 	dma_addr_t queue_desc_pa;
-	dma_addr_t coal_conf_pa;
 
 	/* Wake-on-LAN */
 	u32     wol;
@@ -378,22 +356,11 @@ struct vmxnet3_adapter {
 	u32 rx_ring_size;
 	u32 rx_ring2_size;
 
-	/* Size of buffer in the data ring */
-	u16 txdata_desc_size;
-	u16 rxdata_desc_size;
-
-	bool rxdataring_enabled;
-	bool default_rss_fields;
-	enum Vmxnet3_RSSField rss_fields;
-
 	struct work_struct work;
 
 	unsigned long  state;    /* VMXNET3_STATE_BIT_xxx */
 
 	int share_intr;
-
-	struct Vmxnet3_CoalesceScheme *coal_conf;
-	bool   default_coal_mode;
 
 	dma_addr_t adapter_pa;
 	dma_addr_t pm_conf_pa;
@@ -417,37 +384,13 @@ struct vmxnet3_adapter {
 #define VMXNET3_GET_ADDR_LO(dma)   ((u32)(dma))
 #define VMXNET3_GET_ADDR_HI(dma)   ((u32)(((u64)(dma)) >> 32))
 
-#define VMXNET3_VERSION_GE_2(adapter) \
-	(adapter->version >= VMXNET3_REV_2 + 1)
-#define VMXNET3_VERSION_GE_3(adapter) \
-	(adapter->version >= VMXNET3_REV_3 + 1)
-#define VMXNET3_VERSION_GE_4(adapter) \
-	(adapter->version >= VMXNET3_REV_4 + 1)
-
 /* must be a multiple of VMXNET3_RING_SIZE_ALIGN */
 #define VMXNET3_DEF_TX_RING_SIZE    512
-#define VMXNET3_DEF_RX_RING_SIZE    1024
-#define VMXNET3_DEF_RX_RING2_SIZE   256
-
-#define VMXNET3_DEF_RXDATA_DESC_SIZE 128
+#define VMXNET3_DEF_RX_RING_SIZE    256
+#define VMXNET3_DEF_RX_RING2_SIZE   128
 
 #define VMXNET3_MAX_ETH_HDR_SIZE    22
 #define VMXNET3_MAX_SKB_BUF_SIZE    (3*1024)
-
-#define VMXNET3_GET_RING_IDX(adapter, rqID)		\
-	((rqID >= adapter->num_rx_queues &&		\
-	 rqID < 2 * adapter->num_rx_queues) ? 1 : 0)	\
-
-#define VMXNET3_RX_DATA_RING(adapter, rqID)		\
-	(rqID >= 2 * adapter->num_rx_queues &&		\
-	rqID < 3 * adapter->num_rx_queues)		\
-
-#define VMXNET3_COAL_STATIC_DEFAULT_DEPTH	64
-
-#define VMXNET3_COAL_RBC_RATE(usecs) (1000000 / usecs)
-#define VMXNET3_COAL_RBC_USECS(rbc_rate) (1000000 / rbc_rate)
-#define VMXNET3_RSS_FIELDS_DEFAULT (VMXNET3_RSS_FIELDS_TCPIP4 | \
-				    VMXNET3_RSS_FIELDS_TCPIP6)
 
 int
 vmxnet3_quiesce_dev(struct vmxnet3_adapter *adapter);
@@ -467,25 +410,17 @@ vmxnet3_tq_destroy_all(struct vmxnet3_adapter *adapter);
 void
 vmxnet3_rq_destroy_all(struct vmxnet3_adapter *adapter);
 
-netdev_features_t
-vmxnet3_fix_features(struct net_device *netdev, netdev_features_t features);
-
-netdev_features_t
-vmxnet3_features_check(struct sk_buff *skb,
-		       struct net_device *netdev, netdev_features_t features);
-
 int
 vmxnet3_set_features(struct net_device *netdev, netdev_features_t features);
 
 int
 vmxnet3_create_queues(struct vmxnet3_adapter *adapter,
-		      u32 tx_ring_size, u32 rx_ring_size, u32 rx_ring2_size,
-		      u16 txdata_desc_size, u16 rxdata_desc_size);
+		      u32 tx_ring_size, u32 rx_ring_size, u32 rx_ring2_size);
 
 void vmxnet3_set_ethtool_ops(struct net_device *netdev);
 
-void vmxnet3_get_stats64(struct net_device *dev,
-			 struct rtnl_link_stats64 *stats);
+struct rtnl_link_stats64 *
+vmxnet3_get_stats64(struct net_device *dev, struct rtnl_link_stats64 *stats);
 
 extern char vmxnet3_driver_name[];
 #endif
