@@ -1,0 +1,689 @@
+Release/tag: v2.4.15
+Date: 01/07/2021
+================================
+* ATLDRV-1743 Linux makefile issue
+* ATLDRV-1734 1G HD to be removed
+* Syncup with upstream, no functional changes
+
+Release/tag: v2.4.14
+Date: 13/05/2021
+================================
+
+* ATLDRV-1694 Linux backport: from 5.11
+* ATLDRV-1685 AQC113 ethtool should report fw bundle version instead of MAC fw version
+* ATLDRV-1669 Linux: B0 suspicious differences in codebase
+* ATLDRV-1660 Antigua B1 : 2.4.11.0 atlantic driver failed to load on Fedora33 kernel
+* ATLDRV-1623 Antigua B0: Need to remove half duplex mode support from atlantic
+
+Release/tag: v2.4.13
+Date: 08/03/2021
+================================
+* ATLDRV-1668/ANT-326 Antigua B1 : PTP doesn't work with Antigua B1 adapter
+* RHEL build warning
+
+Release/tag: v2.4.12
+Date: 04/03/2021
+================================
+* ATLDRV-1630 Antigua B0 : Seeing Call trace Invalid tc 0
+* ATLDRV-1655 atlantic driver (Nikki): ethtool statistics counter are incrementing only
+  for the queue, it doesn't get increment for available over all counters
+
+Release/tag: v2.4.11
+Date: 4/12/2020
+================================
+* ATLDRV-1605 AQC107 GPIO_0 PPS alignment
+* ATLDRV-1604 Antigua B0 : Rx data path doesn't work for 38th MACVLAN interface
+
+Release/tag: v2.4.10
+Date: 17/09/2020
+================================
+* ATLDRV-1566 Add support of Antigua B0 statistics
+* ATLDRV-1565 Can't test Sync1588 functionality
+* ATLDRV-1556 GPIO input event timestamping doesn't work on AQC107
+
+Release/tag: v2.4.9
+* Same as v2.4.10
+
+Release/tag: v2.4.8
+Date: 13/08/2020
+================================
+* ATLDRV-1528 Further Linux master sync up with net-next
+* ATLDRV-1518 Incorrect value of Rx and Tx packet counters
+* ATLDRV-1495 Filtering: changes on multicast handling
+
+Release/tag: v2.4.7
+Date: 24/07/2020
+================================
+* ATLDRV-1429	KUnit-based unit tests for min_rate functionality
+* ATLDRV-1504	New dev ids
+* ATLDRV-1518	Incorrect value of Rx and Tx packet counters
+* ATLDRV-1534	hardware timestamping issue
+* ATLDRV-1535	Action Resolver table corruption during link up
+* ATLDRV-1536	Garbage in gpio pin name
+* ATLDRV-1538	PTP is broken on A1
+* ATLDRV-1543	CLONE - Add support for 4.x FW to Atlantic linux driver
+* ATLDRV-1547	A2: Advertise NBase-T speeds
+
+Release/tag: v2.4.6
+Date: 30/06/2020
+================================
+* ATLDRV-1466	Accommodate A2 upstream review comments
+* ATLDRV-1471	Fix build issue(s) on SUSE Linux Enterprise Server 12 SP4
+* ATLDRV-1473	PTP statistics
+* ATLDRV-1484	Replace ENOTSUPP usage to EOPNOTSUPP
+* ATLDRV-1489	RHEL 8.2 driver build error
+* ATLDRV-1491	Sync up Linux master with net-next upstream
+* ATLDRV-1493	Fix and improve post-mortem reset analysis
+* ATLDRV-1503	CLONE - Incorrect temperature is displayed in hwmon
+* ATLDRV-1507	CLONE - Foxcon/Lenovo: Can't uninstall AQN108 NIC driver on Redhat8.1 OS
+* ATLDRV-1509	USI/Lenovo: Linux Driver Fails with RHEL 8.2
+* ATLDRV-1514	Implement support of Runtime PM
+* ATLDRV-1517	Update steps for manual uninstall in README.txt
+
+Release/tag: v2.4.5
+Date: 30/04/2020
+================================
+* ATLDRV-1461	wrong mac addr in offload for FW on Antigua (hotfix after 2.4.4)
+
+Release/tag: v2.4.4
+Date: 28/04/2020
+================================
+* ATLDRV-1463	Fix for ptp rings stats
+* ATLDRV-1462	Backport GPIO from OpenAvnu
+* ATLDRV-1450	Foxcon/Lenovo: Can't uninstall AQN108 NIC driver on Redhat8.1 OS
+* ATLDRV-1447	Typo in aq_ring_tx_clean
+* ATLDRV-1442	BUG: KASAN: stack-out-of-bounds in aq_ndo_setup_tc+0x2a9/0x330 [atlantic]
+* ATLDRV-1440	Run Flexera Code Insight
+* ATLDRV-1432	Backport macsec cleanup from upstream
+* ATLDRV-1428	rename "/lib/firmware/aquantia" to "/lib/firmware/mrvl"
+* ATLDRV-1425	Incorrect work of VLAN Filtering offload
+* ATLDRV-1424	Fix additional review comments from Linux-patches!72
+* ATLDRV-1422	A2 filters layout draft support
+* ATLDRV-1421	Linux-5.7.0 support
+* ATLDRV-1417	Rx path was broken after cleanup
+* ATLDRV-1404	Clean up A2 implementation for upstreaming
+* ATLDRV-1402	macTemperature is always zero
+* ATLDRV-1400	Filtering infrastructure
+* ATLDRV-1395	A2 should not apply phy access code
+* ATLDRV-1393	A2: QoS: Incorrect rx traffic spreading
+* ATLDRV-1390	Linux: add pci error handling callbacks
+* ATLDRV-1387	qos: investigate min_rate and joint min/max rate usage
+* ATLDRV-1254	A2: Linux code cleanup and upstream prep
+* ATLDRV-1204	A2:  PTP merge and cleanup
+
+Release/tag: v2.4.3
+Date: 06/03/2020
+================================
+* ATLDRV-1374	Driver crashes during link up after Wake by MP from S3 (suspend)
+* ATLDRV-1373	Unexpected message displayed after WOL options enabling
+* ATLDRV-1365	Segmentation fault while rmmod atlantic on Antigua 7x7
+* ATLDRV-1361	A1: IPv6 ntuple filters do not work on CentOS7.7-64
+* ATLDRV-1360	A2: Ntuple filters for udp6/tcp4/tcp6/sctp6 (src_port, dst_port) do not work
+* ATLDRV-1344	ethtool doesn't show statistics for all queues in case of multiple TCs
+* ATLDRV-1337	qos: mqprio: implement mqprio rate limiters
+* ATLDRV-1324	Implement cable diag on Antigua
+
+
+Release/tag: v2.4.2
+Date: 18/02/2020
+================================
+* ATLDRV-1346	WOL: Linux driver crashes when restoring from the Hibernate
+* ATLDRV-1345	dmesg warnings after enabling TC if number of vectors is non-standard
+* ATLDRV-1341	QoS: Spread RX traffic through TCs
+* ATLDRV-1338	static checker error: passing untrusted data to 'test_bit()'
+* ATLDRV-1330	Linux: update reset sequence
+* ATLDRV-1328	A1: Ntuple ipv4(dst)/+L4, ipv6(src, dst)/+L4 filters not work
+* ATLDRV-1323	Linux: add early packet break param
+* ATLDRV-1320	WOL does not work on Antigua
+* ATLDRV-1307	Build failure on build-upstream (ioremap_nocache has been removed)
+* ATLDRV-1306	Setup hith antigua card and linux drv does not go to hibernate
+* ATLDRV-1242	Linux macsec backport from FWD
+* ATLDRV-227	QoS
+
+Release/tag: v2.4.1
+Date: 31/01/2020
+================================
+* ATLDRV-1291	Add half/full duplex support in driver interface
+* ATLDRV-1282	Fix build-4.19-32bit
+* ATLDRV-1272	net: aquantia: KASAN: use-after-free in aq_nic_xmit
+* ATLDRV-1266	Lenovo/Foxconn P520/P920 system hang when resume from S4
+* ATLDRV-754	RX flow filter: IPv6 addresses does not works
+
+Release/tag: v2.4.0
+Date: 10/01/2020
+================================
+* ATLDRV-1244 A2: merged A2 into A1
+* ATLDRV-1254 A2: performance: pcie ext tags hook: module param `aq_enable_wa=8`
+
+Release/tag: v2.3.3
+Date: 09/01/2020
+================================
+* ATLDRV-1271 upstream 5.5 backsync
+* ATLDRV-1270 Add support for 4.x FW to Atlantic linux driver
+* ATLDRV-1269 QCOMM: gpio drift
+* ATLDRV-1137 AMD cstom driver that doesn't reset MIPS
+
+
+Release/tag: v2.3.2
+Date: 29/11/2019
+================================
+* ATLDRV-1178    Linux: udp gso and tcp lso were not functional on IPv6
+* ATLDRV-1167    RX traffic stops at all with Windows LKP with MTU 16k
+* ATLDRV-1179    Linux: backport ptp and misc from upstream
+
+Release/tag: v2.3.1.3-a2
+Date: 03/01/2020
+================================
+
+* ATLDRV-1265 Multiply TX Packet Scheduler Data registers by 16 to keep A1 values
+* ATLDRV-1241 A2: new VID/DID
+* A2: Corect FW version display
+* A2: use speed as an input for itr moderation
+* ATLDRV-1254 Code styling/checkpatch
+
+Release/tag: v2.3.1
+Date: 16/10/2019
+================================
+* ATLDRV-1151    DMANetworkLoopback is not working
+* ATLDRV-1131    Linux: 32bit build support
+* ATLDRV-1130    Linux PTP: Invalid pDelay calculation with 2.3.0.0 linux driver
+* ATLDRV-1115    "ifconfig down" does not change link state
+* ATLDRV-1048    Cable Diagnostics
+
+Release/tag: v2.3.0
+Date: 06/09/2019
+================================
+* ATLDRV-1096    Can't build driver on some custom kernels
+* ATLDRV-1094    ethtool timeout while setting EEE settings
+* ATLDRV-1086    Incorrect configure Wake on Link with Wake on Magic Packet
+* ATLDRV-1081    Linux: backport network loopback from FWD
+* ATLDRV-1051    Linux PTP upstream preparations
+* ATLDRV-1049    Backport media detect phy option from FWD driver
+* ATLDRV-770     Linux driver 2.0.22 incorrect display Flow Control status
+
+Release/tag: v2.2.9
+Date: 26/08/2019
+================================
+* ATLDRV-1076   Move SNR caps as in FW
+* ATLDRV-900    Incorrect value flow control in registers
+* ATLDRV-1078   PC does not go to hibernate state
+* ATLDRV-1085   Vlan Promisc mode is enabled when 15 vlans are configured
+* ATLDRV-1091   Linux: Unknown symbol crc_itu_t
+
+Release/tag: v2.2.8
+Date: 08/08/2019
+================================
+* ATLDRV-1074 Driver crashes while tries to raise link (on older kernels)
+
+Release/tag: v2.2.7
+Date: 02/08/2019
+================================
+* ATLDRV-1055 Eliminate warning about FW image file not found
+* ATLDRV-1054 Backport netnext 20/07/2019
+* ATLDRV-1050 Backport Wake on Phy Link support from FWD to generic driver
+* ATLDRV-1048 Cable Diagnostics
+* ATLDRV-1041 Linux: RDM cache clear bit should be toggled, not set
+* ATLDRV-1040 Issues with Makefile
+* ATLDRV-1039 wol does not work on felicity
+* ATLDRV-1019 Lro session with CSUM errors is not drop
+* ATLDRV-1010 RHEL: 1718716: atlantic desn't work at specific topo: bridge
+* ATLDRV-986  backport aq_filters from upstream
+* ATLDRV-946  Add external clock sync in linux driver/firmware
+* ATLDRV-923  UDP GSO: preliminary evaluation
+
+Release/tag: v2.2.6
+Date: 29/05/2019
+================================
+* ATLDRV-979 WoL dosnt config
+* ATLDRV-978 PHY access doesn't work at all
+* ATLDRV-960 Linux driver stuck on linkup
+* ATLDRV-949 Provide more info for debugging purposes
+* ATLDRV-748 macvlan interface gets broken if MULTICAST flag is cleared on the base interface
+
+Release/tag: v2.2.5
+Date: 19/04/2019
+================================
+* ATLDRV-947 Ring gets stuck, ifconfig down hangs the system
+* ATLDRV-941 DMA dropped counter is invalid
+* ATLDRV-934 Incorrect CHIPID for Bermuda NIC
+* ATLDRV-890 Downshift is to be suported
+
+Release/tag: v2.2.4
+Date: 04/04/2019
+================================
+* ATLDRV-917 Vlan promisc mode is turning on with first vlan and not turning on without vlans
+* ATLDRV-911 Linux: backsync with upstream
+* ATLDRV-898 RX traffic stops at all with Windows LKP
+* ATLDRV-894 Linux: tx clean budget has logic error
+* ATLDRV-882 Linux: warnings with gcc 7.3.0
+* ATLDRV-846 Handle HW crash in the driver properly
+* ATLDRV-836 Implement hostboot
+* ATLDRV-723 Backport changes from upstream
+
+Release/tag: v2.2.3
+Date: 26/02/2019
+================================
+* ATLDRV-820 LRO with FCS error hangs the ring
+* ATLDRV-821 rx checksum offload for LRO pass invalid packets
+* ATLDRV-801 LRO is broken
+* ATLDRV-805 RX chksum offload not working in RedHat
+* ATLDRV-799 CLONE - Wrong device ids are present in atl_main.c
+* ATLDRV-742 Linux: aqc111c random disconnect - explicitly disable PTP on bermuda
+* ATLDRV-615 Linux: EEE link modes and LPI timer not reported
+* ATLDRV-377 Link capabilities are taken from statistics memory area
+
+Release/tag: v2.2.2
+Date: 28/01/2019
+================================
+* ATLDRV-783 CentOS 7.6.1810 Driver build failture
+* ATLDRV-776 RX stuck after ifconfig down up
+* Fix no tx isr on PTP
+
+Release: 2.2.1
+Date: 15/01/2019
+tag: v2.2.1
+================================
+* ATLDRV-743 Linux: fix rx checksum offload for UDP/TCP over IPv6
+* ATLDRV-755 Add tracepoints for RX, TX descriptors and RX skb
+
+Release: 2.2.0
+Date: 20/12/2018
+tag: v2.2.0
+================================
+* Merge with 2.0.19 - 2.0.22
+* ATLDRV-238 PTP Support
+* ATLDRV-749 fix too early turning vlan promisc mode
+
+Release: 2.1.2
+Date: 20/10/2018
+tag: v2.1.2
+================================
+ATLDRV-744 Linux: fix vlan offload cfi bit
+ATLDRV-656 UDP RSS should be enabled by default
+ATLDRV-337 Linux: Bad iperf performance on AMD Ryzen setup  (LRO Settings)
+ATLDRV-312 Implement VLAN offload in Linux driver
+
+Release: 2.0.22
+Date: 19/12/2018
+tag: v2.0.22
+================================
+* ATLDRV-738 Linux: improve skb construction
+* MR !125: RHEL8 build fixed
+* MR !92: fixed code style using checkpatch
+
+Release: 2.0.21
+Date: 27/11/2018
+tag: v2.0.21
+================================
+* ATLDRV-383 Loopbacks can't be enabled from link down state
+* ATLDRV-724 rx checksum offload is not working
+
+Release: 2.0.20
+Date: 17/10/2018
+tag: v2.0.20
+================================
+* ATLDRV-376 Suspect TCP/UDP checksum offload always says "good"
+* ATLDRV-630 RX stuck with enabled fast start
+* ATLDRV-647 problem with macvlan
+* ATLDRV-656 UDP RSS should be enabled by default
+
+Release: 2.0.19
+Date: 15/09/2018
+tag: v2.0.19
+================================
+* ATLDRV-625 Bad RSS behaviour on Large fragmented UDP packets
+* ATLDRV-622 Need to disable flow control in MAC when it is disabled by the driver
+
+Release: 2.1.1
+Date: 11/09/2018
+tag: v2.1.1
+================================
+* Merge with 2.0.12 - 2.0.18
+* ATLDRV-368 RX flow filters should be implemented and supported
+* ATLDRV-381 Implement ethtool rxfh (rss) configuration
+* ATLDRV-489 RX flow filters: VLAN
+* ATLDRV-507 Linux 2.1.x: Fixes statistics output and calculation
+* ATLDRV-524 Linux: rxflow: Complete rxflow implementation with ethtypes and priorities
+* ATLDRV-537 Linux: Prepare v2.1.1 release
+* ATLDRV-546 Linux: Fix old kernel builds
+* ATLDRV-382 Implement ethtool identify command
+
+Release: 2.0.18
+Date: 06/09/2018
+tag: v2.0.18
+================================
+* ATLDRV-546 Linux: Fix old kernel builds
+* ATLDRV-575 SMMU fault after device unbind
+
+Release: 2.0.17
+Date: 03/08/2018
+tag: v2.0.17
+================================
+* ATLDRV-314 Multicast packets never get filtered on linux
+* ATLDRV-536 Fix bugs that found smatch
+* ATLDRV-540 upstream: syncup 08/2018
+
+Release: 2.0.16
+Date: 27/07/2018
+tag: v2.0.16
+================================
+* ATLDRV-384 Reduce link-up time to 1sec for SE FW
+  - Link interrupt handling now allows faster link event detection
+  - Special mode for fast init sequence.
+    Disabled by default, enable with AQ_CFG_FAST_START in aq_cfg.h
+* Minor codestyle fixes
+
+Release: 2.0.15
+Date: 29/06/2018
+tag: v2.0.15
+================================
+* RM3118: Add Phy Int/Ext loopbacks to ethtool.
+  NOTICE:
+  - All loopback modes should be enabled only when interface is UP.
+  - DMANetworkLoopback mode may not function as expected.
+
+Release: 2.0.14
+Date: 27/06/2018
+tag: v2.0.14
+================================
+* RM3132: KVM/macvlan bridge was not functional
+* RM3118: Add loopback to ethtool.
+  README with priv-flags sections.
+  Only System level loopback is functional for now.
+
+Release: 2.0.12
+Date: 29/05/2018
+tag: v2.0.12
+================================
+* RM2921 Configure WOL to enable magic by default
+* netdev 4.17 styling syncup
+
+Release: 2.1.0
+Date: 21/05/2018
+tag: v2.1.0
+================================
+* PTP functionality merged in
+
+Release: 2.0.11
+Date: 18/05/2018
+tag: v2.0.11
+================================
+* cable len and chip temperature are now implemented via hwmon (sensors API)
+* Performance: Reset page offset when found that full page reuse is possible
+
+Release: 2.0.10.0
+Date: 03/05/2018
+tag: v2.0.10
+================================
+* RM2691: Kernel 2.x support (experimental)
+* RM2692: Linux DKMS packaging
+* RM2698: ethtool negotiate restart should be implemented
+* RM2736: ethtool ring size dynamic change
+* RM2734: EEE settings are lost after link down/up
+* RM2765: Linux driver must support WOL from shutdown
+* RM2697: WoL works in wrong way with FW3.x DW
+* RM2693: Pause frame (flow control) configuration should be done via ethtool
+* RH-1542881 Declare vlan_features bits:
+  http://gitlab.rdc.aquantia.com/drv/Linux/merge_requests/62
+* Leftover bugfixes (msi isr)
+  http://gitlab.rdc.aquantia.com/drv/Linux/merge_requests/61
+
+Release: 2.0.9.0
+Date: 18/04/2018
+tag: v2.0.9
+================================
+* RM2738: Fix RHEL7.5 incompatibility
+
+Release: 2.0.8.0
+Date: 11/04/2018
+tag: v2.0.8
+================================
+* 199177: ASUS XG-C100C 10G Network Adapter no longer working since 4.16
+  FW 1.5.44 and reset sequence collision
+  https://bugzilla.kernel.org/show_bug.cgi?id=199177
+  http://gitlab.rdc.aquantia.com/drv/Linux/merge_requests/54
+
+Release: 2.0.7.0
+Date: 05/04/2018
+tag: v2.0.7
+================================
+* RM2544 Need to make EEE feature configurable with ethtool
+* RM2676 net: aquantia: take care when shutdown on already stopped device
+* RM2667 Disable Dirty Wake on shutdown and suspend
+* (misc) netdev comments 4.16 rc6
+* readme updates on installation
+
+Release: 2.0.6.0
+Date: 15/03/2018
+tag: v2.0.6
+================================
+* RM2574 Post fix (R.Volkov found)
+* Shutdown pci callback closes the link (Synology NAS issues)
+* Introduce rx refill threshold parameter: aq_rx_refill_thres
+
+Release: 2.0.5.0
+Date: 06/03/2018
+tag: v2.0.5
+================================
+* RM2574 B1 hardware never indicates mailbox ready
+* RM2573 Flow control must be enabled by deffault
+* RM2543 Linux driver must set link_drop bit when interface is down
+* Buffer flip&reuse implementation
+  http://gitlab.rdc.aquantia.com/drv/Linux/merge_requests/41
+
+Release: 2.0.4.0
+Date: 16/02/2018
+tag: v2.0.4
+================================
+* RM2508 Indication of the WOL state does not work correctly
+* RM2520 WOL in 2.0.3.0 Linux driver dosn't work with B0 cards
+* RM2512 No traffic on FW 1.5.58 with 2x Linux driver
+* Wrong MTU size checks (< Min or > Max) are now working again on linuxes < 4.10
+* Fix compilation on linux 3.16
+* Reset sequence fix: RBL secure chip reset sequence have to reset SPI
+* RM2536 allow Live MAC change
+* napi_alloc_skb improves performance on high packet rates
+
+Release: 2.0.3.0
+Date: 29/01/2018
+tag: v2.0.3
+================================
+* netdev syncup
+* RM2209: WOL feature (magic packet only)
+* Cable length and temp diagnostics data in sysfs
+* RM2370 Errors are appear during uninstalation linux driver
+
+Upstream Release: 2.0.2.1-kern
+kernel: 4.16
+================================
+d28e9d1 net: aquantia: driver version bump
+fd8221f net: aquantia: Implement pci shutdown callback
+a1c1d63 net: aquantia: Allow live mac address changes
+33a3d54 net: aquantia: Add aq_tx_clean_budget and valid budget handling logic
+002594f net: aquantia: Change inefficient wait loop on fw data reads
+b8d7ecb net: aquantia: Fix a regression with reset on old firmware
+c0a6a02 net: aquantia: Fix hardware reset when SPI may rarely hangup
+
+Release 2.0.2.0
+Upstream: 2.0.2-kern
+tag: v2.0.2
+25/01/2018 f/w 1.x, 2.9.x, 3.x or above
+================================
+* netdev syncup: Do not reset curr_stats on each up/down
+* netdev syncup: typo Octects
+* RM2420:Wrong felicity IDs and link speeds reported
+
+Release 2.0.1.0
+tag: v2.0.1
+30/11/2017 f/w 1.x, 2.9.x, 3.x or above
+================================
+*RM2267:Statistics mistakes and errors
+*RM2128:... PCI errors and NMI
+
+Release 2.0.0.0
+tag: v2.0.0
+17/11/2017 f/w 1.x, 2.9.x, 3.x or above
+================================
++ Reset sequence implemented
+* MAC address readout fixed
+
+Release 2.0.0.0-alpha2
+tag: v2.0.0-alpha2
+11/11/2017 f/w 3.0.3 or above
+================================
+* kernel 3.x build fixed
+
+Release 2.0.0.0-alpha1
+tag: v2.0.0-alpha1
+10/11/2017 f/w 3.0.3 or above
+================================
++ Initial support for both 1.x, 2.x and 3.x FW
+* 64bit wide statistics in ethtool
+! Full reset sequence is not yet implemented
+! Link status is polled, no isr usage yet
+
+
+
+
+
+
+Release 1.6.12.0 master 10_09-2017 f/w 1.5.14 or above
+=============
++QNAP requesting ethtool -c option (#2053)
+*Statistics never gets zeroed upon interface down/up (#2015)
+*Non optimal Interrupt Moderation Rates default settings makes udp very slow (#2041)
+
+Release 1.6.11.0 master 09_25-2017 f/w 1.5.14 or above
+=============
+*Link state is up right after link up command execution for 2 seconds then link goes down (#2033)
+*Netnext mainline syncup
+
+Release 1.6.10.0 master 09_20-2017 f/w 1.5.14 or above
+=============
+*Invalid queue state management causes Tx/Rx to die (#1941)
+*kernel mainline driver does not support jumbo frames (#1985)
+
+Release 1.6.9.0 rel-dev-1.6.9 08_11-2017 f/w 1.5.14 or above
+=============
+*MSM counters are not reset after driver is unloaded/loaded. (#1619).
+*Kernel panic/memory corruption on multicast > 32 (#1864).
+*Incorrect Interrupt moderation values assignment in linux driver (#1918).
+*Fix for enabling incorrect interrupt vectors count on Puma 7 Intel SoC (with Linux Kernel 3.10).
+*Removed unuseful spinlocks from datapath.
+*Minor fixes.
+
+Release 1.6.8.0 rel-dev 07_05-2017 f/w 1.5.14 or above
+=============
+*Fix for RX datapath initialization.
+*Minor fixes.
+
+Release 1.6.7.0 rel-dev 05_05-2017 f/w 1.5.14 or above
+=============
+*Synced with linux sources tree.
+*Support for GRO
+*Fixed Ethtool -S crash
+*Support for kernels >= 3.10
+*Minor fixes.
+
+Release 1.6.2.0 rel-kernel-arm 03_16-2017 f/w 1.5.14 or above
+=============
+*Synced with linux sources tree.
+*Fixed checksumm offloads for IPv6.
+*Added support for ARM.
+*Support for kernels 4.4, 4.8, 4.9
+*Minor fixes.
+
+Release 1.5.345.0 rel-kernel-b0-v3 01_19-2017 f/w 1.5.14 or above
+=============
+*Linux upstream fixes
+*Add fw version checking
+*Fix pm-resume crash.
+
+Release 1.5.335.0 rel-kernel-b0-v3 01_09-2017 f/w 1.5.14 or above
+=============
+*Linux upstream fixes
+
+Release 1.5.324.0 dev-pb-b0-cln-2 12_17-2016 f/w 1.5.14 or above
+=============
+*hibernate fix
+*Minor fixes and code cleanup
+
+Release 1.5.300.0 dev-pb-b0-cln 12_06-2016 f/w 1.5.14 or above
+=============
+*d109 pid support
+*Minor fixes and code cleanup
+
+
+Release 1.5.248.3 dev-pb-b0-clean 11-30-2016 f/w 1.5.14 or above
+=============
+* fix change link speed while NIC down.
+
+Release 1.5.247.3 dev-pb-b0-clean 11-30-2016 f/w 1.5.14 or above
+=============
+* fix netif status
+
+Release 1.5.246.3 dev-pb-b0-clean 11-29-2016 f/w 1.5.14 or above
+=============
++Felicity PID support
+*Updated TX/RX throttling params
+*Minor fixes and code cleanup
+
+Release 1.5.245.3 dev-pb-b0-clean 11-23-2016 f/w 1.5.14 or above
+=============
++CSO error workaround (Bug #701)
++ifconfig filter support (promisc/multicast/broadcast/allmulti)
++Minor fixes and code cleanup
+
+
+Release 1.5.244.3 dev-pb-b0-clean 11-19-2016 f/w 1.5.14 or above
+============
+* Fix #701 workaround 
+
+Release 1.5.243.3 dev-pb-b0-clean 11-16-2016 f/w 1.5.14 or above
+============
++improved ethtool statistics
+
+Release 1.5.239.3 dev-pb-b0-clean 11-11-2016 f/w 1.5.14 or above
+============
++NAPI compliance fix
++Hot unplug fix
++Minor fixes and code cleanup
+
+
+
+Release 1.5.210.3 dev-pb-b0-clean 11-03-2016 f/w 1.5.14 or above
+============
++Fixed Jumbo frames.
++RSS fixes (new hash key, print RSS settings via ethtool)
++Minor fixes and code cleanup
+
+Release 1.5.203.3 dev-pb-b0-clean 10-31-2016 f/w 1.5.14 or above
+=============
++Support SuseServer 12.1
++Fixed kernel panic on CentOS 7.
+
+
+Release 1.5.201.3 dev-pb-b0-clean 10-29-2016 f/w 1.5.14 or above
+=============
++Support Centos
++Minor fixes and code cleanup
+
+Release 1.5.200.3 dev-pb-b0-clean 10-29-2016 f/w 1.5.10 or above
+=============
++Support new VID/PID.
++Fixed and tested the driver for B0 on FPGA.
++Support LRO for B0 on FPGA.
++Fixed link status detect.
+
+Known issues:
+- Build failed on Centos
+
+
+Release 1.5.100.3 10-22-2016 f/w 1.4 or above
+=============
++ Ethtool statistics
+* Debian 6 kernel build
+* A0/B0 support
+
+Know issues:
+- Link status hardcoded always '1G connected'

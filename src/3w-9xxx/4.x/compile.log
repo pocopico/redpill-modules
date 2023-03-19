@@ -1,0 +1,32 @@
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c: In function 'twa_aen_queue_event':
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c:375:17: error: storage size of 'time' isn't known
+  struct timeval time;
+                 ^~~~
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c:398:2: error: implicit declaration of function 'do_gettimeofday'; did you mean 'do_settimeofday64'? [-Werror=implicit-function-declaration]
+  do_gettimeofday(&time);
+  ^~~~~~~~~~~~~~~
+  do_settimeofday64
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c:375:17: warning: unused variable 'time' [-Wunused-variable]
+  struct timeval time;
+                 ^~~~
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c: In function 'twa_aen_sync_time':
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c:479:17: error: storage size of 'utc' isn't known
+  struct timeval utc;
+                 ^~~
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c:479:17: warning: unused variable 'utc' [-Wunused-variable]
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c: In function 'twa_chrdev_ioctl':
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c:654:17: error: storage size of 'current_time' isn't known
+  struct timeval current_time;
+                 ^~~~~~~~~~~~
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c:654:17: warning: unused variable 'current_time' [-Wunused-variable]
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c: At top level:
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c:1996:3: error: 'struct scsi_host_template' has no member named 'use_clustering'
+  .use_clustering  = ENABLE_CLUSTERING,
+   ^~~~~~~~~~~~~~
+/opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.c:1996:21: error: 'ENABLE_CLUSTERING' undeclared here (not in a function); did you mean 'APIC_CLUSTERID'?
+  .use_clustering  = ENABLE_CLUSTERING,
+                     ^~~~~~~~~~~~~~~~~
+                     APIC_CLUSTERID
+cc1: some warnings being treated as errors
+make[1]: *** [scripts/Makefile.build:280: /opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx/3w-9xxx.o] Error 1
+make: *** [Makefile:1822: /opt/dsm-kernel/epyc7002/redpill-modules/3w-9xxx] Error 2
