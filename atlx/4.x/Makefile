@@ -1,2 +1,0 @@
-obj-m	+= atlx.o
-
