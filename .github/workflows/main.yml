@@ -15,7 +15,7 @@ jobs:
       - name: Tar modules
         run: |
           for D in `ls -d *-*`; do
-            (cd ${D} && tar caf ../${D}.tgz *.ko)
+            (cd ${D} && tar caf ../${D}.tgz *.ko && sha256sum ../${D}.tgz >> ../chksum.log)
           done
           (cd firmware && tar caf ../firmware.tgz *)
 
@@ -25,4 +25,4 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            *.tgz
+            *.tgz chksum.log
