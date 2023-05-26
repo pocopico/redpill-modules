@@ -26,4 +26,4 @@ jobs:
         with:
           files: |
             *.tgz
-            chksum.log
+            
