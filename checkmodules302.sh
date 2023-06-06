@@ -4,7 +4,7 @@ header="%-20s| %-21s | %-22s | %-22s | %-21s | %-21s | %-21s | %-21s  %c\n"
 
 checkmodule() {
 
-    [ ! -f $1/$2 ] && cp ../compiled-modules/$1/$2 $1/$2 && echo "fixed $1/$2 missing" >>fixed.txt
+    #[ ! -f $1/$2 ] && cp ../compiled-modules/$1/$2 $1/$2 && echo "fixed $1/$2 missing" >>fixed.txt
     [ -f $1/$2 ] && printf "1" || printf "0"
 
 }
