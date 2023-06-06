@@ -7,7 +7,7 @@ for D in `ls -d *-*/`; do
     depends=`modinfo "${M}" | grep depends: | awk -F: '{print $2}' | awk '$1=$1' | sed 's/,/ /g'`
     if [ ${#depends[*]} -gt 0 ]; then
       for k in `echo "$depends"`; do
-        [ ! -f "./${E}/${k}.ko" ] && echo "cp -rp $D${k}.ko $D " 
+        [ ! -f "./${E}/${k}.ko" ] && echo "[W] ${M} depends ${k} does not exist" 
       done
     fi
   done
