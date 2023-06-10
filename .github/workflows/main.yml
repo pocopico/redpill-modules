@@ -325,7 +325,7 @@ jobs:
           mkdir -p firmware
 
           echo "copy 3rd modules"
-          PARTY3RD_PATH="${{ github.workspace }}/firmware"
+          PARTY3RD_PATH="${{ github.workspace }}/src/firmware"
           cp -rf ${PARTY3RD_PATH}/* firmware/
 
           echo "extract all modules"
