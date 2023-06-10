@@ -17,7 +17,7 @@ jobs:
           for D in `ls -d *-*`; do
             (cd ${D} && tar caf ../${D}.tgz *.ko && sha256sum ../${D}.tgz >> ../chksum.log)
           done
-          (cd firmware && tar caf ../firmware.tgz *)
+          (cd src/firmware && tar caf ../../firmware.tgz *)
 
       # Publish a release if is a tag
       - name: Release
