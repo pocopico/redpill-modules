@@ -1,36 +1,31 @@
-#!/bin/bash
-KERNEL_SOURCE="/opt/dsm-kernel/$TARGET_PLATFORM/linux-4.4.x"
-KHOME="/opt/dsm-kernel/$TARGET_PLATFORM"
+#!/usr/bin/env bash
 
-CROSS_COMPILE="$KHOME/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/bin/x86_64-pc-linux-gnu-"
-CFLAGS="-I$KHOME/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/include/" 
-LDFLAGS="-I$KHOME/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/lib/" 
-RANLIB="/usr/bin/x86_64-linux-gnu-ranlib" 
-LD="/usr/bin/x86_64-linux-gnu-ld" 
-CC="/usr/bin/x86_64-linux-gnu-gcc"
-LD_LIBRARY_PATH="$KHOME/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib" 
-KSRC="$KHOME/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr/lib/modules/DSM-7.0/build/" \
-ARCH=x86_64 
+set -e
 
+TOOLKIT_VER="7.1"
 
+if [ -f ../../arpl/PLATFORMS ]; then
+  cp ../../arpl/PLATFORMS PLATFORMS
+else
+  curl -sLO "https://github.com/fbelavenuto/arpl/raw/main/PLATFORMS"
+fi
 
-function compile() {
-
-echo "Compiling module "
-
-make KSRC=${KSRC} -C $KSRC M=`pwd` modules $@ 
-
- while read module; do
-    module="`basename ${module}`"
-    modinfo --field version ./$module > .version
-    strip -g "${module}"
-    echo "Copying ${module}"
-    cp "${module}" "/opt/dsm-kernel/modules_make/$TARGET_PLATFORM/"
-    [ -f /opt/dsm-kernel/modules_make/$TARGET_PLATFORM/${module} ] || echo "${module} Compile or copy failed" && echo "${module} Compiled and copied" 
-  done < <(find . -name \*.ko)
-
-echo "Cleaning compiled objects" && rm -rf *.o *.ko
-
-}
-
-compile 1> /dev/null 2> compile.log
+echo -e "Compiling modules..."
+while read PLATFORM KVER; do
+  [ -n "$1" -a "${PLATFORM}" != "$1" ] && continue
+  DIR="${KVER:0:1}.x"
+  [ ! -d "${PWD}/${DIR}" ] && continue
+  mkdir -p "/tmp/${PLATFORM}-${KVER}"
+  #docker run --rm -t -v "${PWD}/${1}/${DIR}":/input -v "${PWD}/../${PLATFORM}-${KVER}":/output \
+  #  fbelavenuto/syno-toolkit:${PLATFORM}-${TOOLKIT_VER} compile-module
+  docker run -u `id -u` --rm -t -v "${PWD}/${DIR}":/input -v "/tmp/${PLATFORM}-${KVER}":/output \
+    fbelavenuto/syno-compiler:${TOOLKIT_VER} compile-module ${PLATFORM}
+  for M in `ls /tmp/${PLATFORM}-${KVER}`; do
+    [ -f ~/src/pats/modules/${PLATFORM}/$M ] && \
+      # original
+      cp ~/src/pats/modules/${PLATFORM}/$M "${PWD}/../${PLATFORM}-${KVER}" || \
+      # compiled
+      cp /tmp/${PLATFORM}-${KVER}/$M "${PWD}/../${PLATFORM}-${KVER}"
+  done
+  rm -rf /tmp/${PLATFORM}-${KVER}
+done < PLATFORMS
